@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+font-family: Tahoma, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Fallback Fonts</h1>
+
+<p>Nguyen Chi Phuong</p>
+<p>202109011</p>
+
+</body>
+</html>
