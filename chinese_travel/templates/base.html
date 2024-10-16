@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        Chinese Travel
+    </div>
+    <nav>
+        <a href="/" class="{% if active_page == 'home' %}active{% endif %}">Home</a>
+        <a href="/destinations" class="{% if active_page == 'destinations' %}active{% endif %}">Destinations</a>
+        <a href="/contact" class="{% if active_page == 'contact' %}active{% endif %}">Contact</a>
+        <div class="nav-right">
+            <a href="/login" class="{% if active_page == 'login' %}active{% endif %}">Login</a>
+            <a href="/signup" class="{% if active_page == 'signup' %}active{% endif %}">Sign Up</a>
+        </div>
+    </nav>
+    <div class="hero-section">
+        <h1 id="page-title" class="editable">Chinese Travel</h1>
+        <div class="info-box">
+            <form>
+                <label for="location">Địa điểm:</label>
+                <input type="text" id="location" name="location"><br><br>
+                <label for="people">Số người:</label>
+                <input type="number" id="people" name="people"><br><br>
+                <label for="start-date">Ngày đi:</label>
+                <input type="date" id="start-date" name="start-date"><br><br>
+                <label for="end-date">Ngày về:</label>
+                <input type="date" id="end-date" name="end-date"><br><br>
+                <input type="submit" value="Tìm kiếm">
+            </form>
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>
