@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="header">
-        Chinese Travel
-    </div>
     <nav>
         <a href="/" class="{% if active_page == 'home' %}active{% endif %}">Home</a>
         <a href="/destinations" class="{% if active_page == 'destinations' %}active{% endif %}">Destinations</a>
         <a href="/contact" class="{% if active_page == 'contact' %}active{% endif %}">Contact</a>
         <div class="nav-right">
             <a href="/login" class="{% if active_page == 'login' %}active{% endif %}">Login</a>
-            <a href="/signup" class="{% if active_page == 'signup' %}active{% endif %}">Sign Up</a>
+            <a href="/signup" class="{% if active_page == 'signup' %}active{% endif %}">Register</a>
         </div>
     </nav>
     <div class="hero-section">
         <h1 id="page-title" class="editable">Chinese Travel</h1>
         <div class="info-box">
-            <form>
+            <form id="search-form">
                 <label for="location">Địa điểm:</label>
                 <input type="text" id="location" name="location"><br><br>
                 <label for="people">Số người:</label>
@@ -35,6 +32,34 @@
             </form>
         </div>
     </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Thanh toán</h2>
+            <p>Chọn phương thức thanh toán:</p>
+            <button class="payment-method">Quét mã QR</button>
+            <button class="payment-method">Thanh toán bằng ví điện tử</button>
+        </div>
+    </div>
+
     {% block content %}{% endblock %}
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById('payment-modal').style.display = 'block'; // Show the modal
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('payment-modal').style.display = 'none'; // Hide the modal
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == document.getElementById('payment-modal')) {
+                document.getElementById('payment-modal').style.display = 'none'; // Hide the modal if clicked outside
+            }
+        });
+    </script>
 </body>
 </html>

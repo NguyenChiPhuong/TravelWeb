@@ -29,7 +29,7 @@
     bottom: 20px;
     left: 20px;
     width: 6cm; /* Chiều ngang */
-    height: 9cm; /* Chiều dài */
+    height: 12cm; /* Chiều dài */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -63,6 +63,7 @@
 .info-box input[type="submit"]:hover {
     background-color: #45a049;
 }
+
 nav {
     background-color: #333;
     overflow: hidden;
@@ -89,4 +90,351 @@ nav .nav-right {
 nav a.active {
     background-color: #4CAF50;
     color: white;
+}
+
+.tour-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.tour-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.tour-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tour {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tour img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.tour h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.tour-description {
+    font-size: 1em;
+    color: #777;
+    text-align: justify;
+    max-width: 90%;
+    margin: 0 auto 10px auto;
+}
+
+.tour-time, .tour-cost {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+.book-now {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now:hover {
+    background-color: #45a049;
+}
+.search-panel {
+    position: relative; /* Ensure the panel is positioned relative for absolute positioning of the button */
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.payment-method {
+    background-color: #2196F3; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block display */
+    font-size: 1em; /* Font size */
+    margin: 10px 0; /* Margin */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.payment-method:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+/* New styles added */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .content {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .tour {
+        width: 100%;
+    }
+
+    .info-box {
+        width: 90%;
+        height: auto;
+        bottom: 10px;
+        left: 10px;
+    }
+}
+.feedback-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.feedback-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-text {
+    font-style: italic;
+    color: #555;
+}
+
+.feedback-author {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-divider {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-info a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Heading */
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Form Labels */
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Form Inputs */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Additional Text */
+.form-container p {
+    margin-top: 10px;
+}
+
+/* Links */
+.form-container a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Flash Messages */
+.flash {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.danger {
+    background-color: #f8d7da;
+    color: #721c24;
 }

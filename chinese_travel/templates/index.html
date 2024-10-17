@@ -1,10 +1,19 @@
+
 {% extends "base.html" %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
+
 <div class="hero-section">
     <h1 id="page-title" class="editable">Welcome to the Home Page</h1>
+    {% if user %}
+        <p>Xin chào, {{ user.username }}!</p>
+    {% endif %}
+</div>
+<hr class="section-divider">
+
 </div>
 
 <hr class="section-divider">
@@ -13,16 +22,28 @@
     <h2>Our Tours</h2>
     <div class="tour-container">
         <div class="tour">
+            <img src="https://vietnam-tickets.com/images/2023/2024_TinTuc/du-lich-nam-kinh/17_MuaDongNamKinh_DuLichNamKinh.jpg" alt="Tour Image 1">
             <h3>Tour 1: Nam Kinh</h3>
-            <p>Tour du lịch Nam Kinh, Trung Quốc, mang đến cho du khách cơ hội khám phá một thành phố lịch sử và văn hóa phong phú. Nam Kinh, từng là kinh đô của nhiều triều đại Trung Quốc, nổi bật với các di tích lịch sử như Cổng Thành Nam Kinh, Lăng Mộ Minh Hoàng Đế, và Bảo tàng Nam Kinh. Ngoài việc tìm hiểu về quá khứ vĩ đại của thành phố, du khách còn có thể thưởng thức cảnh quan tuyệt đẹp của Hồ Xuanwu và dạo chơi tại các khu phố cổ. Tour này kết hợp giữa khám phá di sản văn hóa và thư giãn trong môi trường tươi đẹp, chắc chắn sẽ là một trải nghiệm đáng nhớ.</p>
+            <p class="tour-description">Tour du lịch Nam Kinh, Trung Quốc, mang đến cho du khách cơ hội khám phá một thành phố lịch sử và văn hóa phong phú. Nam Kinh, từng là kinh đô của nhiều triều đại Trung Quốc, nổi bật với các di tích lịch sử như Cổng Thành Nam Kinh, Lăng Mộ Minh Hoàng Đế, và Bảo tàng Nam Kinh. Ngoài việc tìm hiểu về quá khứ vĩ đại của thành phố, du khách còn có thể thưởng thức cảnh quan tuyệt đẹp của Hồ Xuanwu và dạo chơi tại các khu phố cổ. Tour này kết hợp giữa khám phá di sản văn hóa và thư giãn trong môi trường tươi đẹp, chắc chắn sẽ là một trải nghiệm đáng nhớ.</p>
+            <p class="tour-time">Thời gian đi: 5 ngày 4 đêm</p>
+            <p class="tour-cost">Chi phí: 10,000,000 VND</p>
+            <button class="book-now">Đặt vé ngay</button>
         </div>
         <div class="tour">
+            <img src="https://6.img.izshop.vn/tv31/images/tour/2024/07/origin/66119048c5e2380e125b829e50d82001.jpg" alt="Tour Image 2">
             <h3>Tour 2: Phượng Hoàng cổ Trấn</h3>
-            <p>Phượng Hoàng Cổ Trấn là một thị trấn cổ xinh đẹp nằm ở tỉnh Hồ Nam, Trung Quốc. Nổi tiếng với những ngôi nhà cổ kính dọc theo sông Đà Giang và các con phố lát đá, nơi đây giữ gìn được vẻ đẹp truyền thống và không khí lãng mạn của Trung Quốc cổ đại. Các điểm tham quan chính bao gồm cầu Hồng Kiều, các ngôi đền và chùa, cũng như các hoạt động dạo chơi ven sông. Đây là một địa điểm lý tưởng cho những ai yêu thích lịch sử và văn hóa truyền thống.</p>
+            <p class="tour-description">Phượng Hoàng Cổ Trấn là một thị trấn cổ xinh đẹp nằm ở tỉnh Hồ Nam, Trung Quốc. Nổi tiếng với những ngôi nhà cổ kính dọc theo sông Đà Giang và các con phố lát đá, nơi đây giữ gìn được vẻ đẹp truyền thống và không khí lãng mạn của Trung Quốc cổ đại. Các điểm tham quan chính bao gồm cầu Hồng Kiều, các ngôi đền và chùa, cũng như các hoạt động dạo chơi ven sông. Đây là một địa điểm lý tưởng cho những ai yêu thích lịch sử và văn hóa truyền thống.</p>
+            <p class="tour-time">Thời gian đi: 4 ngày 3 đêm</p>
+            <p class="tour-cost">Chi phí: 8,000,000 VND</p>
+            <button class="book-now">Đặt vé ngay</button>
         </div>
         <div class="tour">
+            <img src="https://imagescdn.pystravel.vn/uploads/posts/avatar/1645414302.jpg" alt="Tour Image 3">
             <h3>Tour 3: Nội Mông Cổ</h3>
-            <p>Nội Mông Cổ là một khu tự trị của Trung Quốc, nổi tiếng với phong cảnh rộng lớn và đặc trưng của đồng cỏ xanh mướt, những dãy núi hùng vĩ và văn hóa du mục truyền thống của người Mông Cổ. Khu vực này cũng nổi bật với các di tích lịch sử, như Đền Thành Cát Tư Hãn, và những hoạt động ngoài trời như cưỡi ngựa và trại lều truyền thống. Nội Mông Cổ mang đến một trải nghiệm độc đáo về sự hòa quyện giữa thiên nhiên và văn hóa bản địa.</p>
+            <p class="tour-description">Nội Mông Cổ là một khu tự trị của Trung Quốc, nổi tiếng với phong cảnh rộng lớn và đặc trưng của đồng cỏ xanh mướt, những dãy núi hùng vĩ và văn hóa du mục truyền thống của người Mông Cổ. Khu vực này cũng nổi bật với các di tích lịch sử, như Đền Thành Cát Tư Hãn, và những hoạt động ngoài trời như cưỡi ngựa và trại lều truyền thống. Nội Mông Cổ mang đến một trải nghiệm độc đáo về sự hòa quyện giữa thiên nhiên và văn hóa bản địa.</p>
+            <p class="tour-time">Thời gian đi: 6 ngày 5 đêm</p>
+            <p class="tour-cost">Chi phí: 12,000,000 VND</p>
+            <button class="book-now">Đặt vé ngay</button>
         </div>
     </div>
 </div>
@@ -31,14 +52,19 @@
 
 <div class="feedback-section">
     <h2>Customer Feedback</h2>
-    <div class="feedback">
-        <p>"The mountain tour was absolutely amazing! The views were breathtaking and the guide was very knowledgeable." - John Doe</p>
-    </div>
-    <div class="feedback">
-        <p>"I had a wonderful time on the beach tour. The beaches were pristine and the activities were so much fun." - Jane Smith</p>
-    </div>
-    <div class="feedback">
-        <p>"The city tour was a great way to explore the city's highlights. I learned so much and saw so many interesting places." - Mark Johnson</p>
+    <div class="feedback-container">
+        <div class="feedback">
+            <p class="feedback-text">"This was the best tour I've ever been on! Highly recommend."</p>
+            <p class="feedback-author">- John Doe</p>
+        </div>
+        <div class="feedback">
+            <p class="feedback-text">"Amazing experience, great service and beautiful destinations."</p>
+            <p class="feedback-author">- Jane Smith</p>
+        </div>
+        <div class="feedback">
+            <p class="feedback-text">"A wonderful trip with excellent guides and well-planned itinerary."</p>
+            <p class="feedback-author">- Michael Brown</p>
+        </div>
     </div>
 </div>
 
@@ -46,11 +72,11 @@
 
 <div class="contact-section">
     <h2>Contact Us</h2>
-    <p>If you have any questions or would like to book a tour, please contact us:</p>
-    <ul>
-        <li>Email: info@travelwebsite.com</li>
-        <li>Phone: (123) 456-7890</li>
-        <li>Address: 123 Travel St, Adventure City, Country</li>
+    <p>Nếu bạn có bất kỳ câu hỏi hay yêu cầu nào, vui lòng liên hệ với chúng tôi qua:</p>
+    <ul class="contact-info">
+        <li>Email: <a href="mailto:info@travelwebsite.com">Ctravel@travelwebsite.com</a></li>
+        <li>Phone: <a href="tel:+1234567890">(123) 456-7890</a></li>
+        <li>Address: 123 ABC, HÀ NỘI, VIỆT NAM</li>
     </ul>
 </div>
 {% endblock %}
